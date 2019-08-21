@@ -91,7 +91,7 @@ class Pong
 		};
 		callback();
 		this.CHAR_PIXEL = 10;
-		this.CHARS = [
+		this.SCOREBOARD = [
 		'111101101101111',
 		'010010010010010',
 		'111001111100111',
@@ -160,7 +160,7 @@ class Pong
 			const chars = player.score.toString().split('');
 			const offset = align * (index + 1) - (CHAR_W * chars.length /2 ) + this.CHAR_PIXEL / 2;
 		    chars.forEach((char, pos) => {
-		    	this._context.drawImage(this.CHARS[char |0], 
+		    	this._context.drawImage(this.SCOREBOARD[char |0], 
 		    		                   offset + pos * CHAR_W ,20);
 
 		    });
